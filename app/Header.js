@@ -4,6 +4,7 @@ import React from "react"
 import Link from 'next/link'
 import useCart from "./(store)/store"
 import Modal from "./Modal"
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 export default function Header() {
     const cartItem = useCart(state => state.cart)
@@ -17,17 +18,23 @@ export default function Header() {
                     <Modal />
                 )}
                 <Link href={'/'}>
-                    <h1 className=' uppercase cursor-pointer hover:scale-110'>Fruit shop</h1>
+                    <div className="flex items-center justify-between">
+                        <img
+                            src="https://i.pinimg.com/736x/12/d6/00/12d60046505b41fe3ca8a71e0d186c62.jpg"
+                            className="sm:w-[100px] sm:h-[100px] w-[75px] h-[75px] m-auto rounded-full"
+                        />
+                        <h1 className=' uppercase cursor-pointer hover:scale-110 ml-3'>Fruit shop</h1>
+                    </div>
                 </Link>
                 <div onClick={setOpenModal} className=" relative cursor-pointer group grid place-items-center">
 
                     {cartItem.length > 0 && (
-                        <div className=" absolute aspect-square pointer-events-none h-5 sm:h-6 grid place-items-center bg-blue-500 text-white rounded-full top-0 right-0 -translate-y-1/2 translate-x-1/2">
+                        <div className=" absolute aspect-square pointer-events-none h-5 sm:h-6 my-10 sm:my-7 grid place-items-center bg-blue-500 text-white rounded-full top-0 right-0 -translate-y-1/2 translate-x-1/2">
                             <p className="text:xs sm:text-sm">{cartItem.length}</p>
                         </div>
                     )}
 
-                    <i className="fa-solid cursor-pointer group-hover:text-slate-500 fa-cart-shopping"></i>
+                    <AiOutlineShoppingCart className="fa-solid cursor-pointer group-hover:text-slate-500"></AiOutlineShoppingCart>
                 </div>
             </header>
         </div>

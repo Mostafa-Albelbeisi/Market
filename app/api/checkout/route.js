@@ -30,8 +30,8 @@ export async function POST(request) {
         })
         return NextResponse.json({ session })
     } catch (error) {
-        console.log('BROKED')
-        console.log(err)
+        // console.log('BROKED')
+        // console.log(err)
         return new Response('Error', {
             status: 405,
         });
