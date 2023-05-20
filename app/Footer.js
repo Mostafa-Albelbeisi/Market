@@ -16,10 +16,10 @@ export default function Footer() {
         //     </Link>
         // </footer>
 
-        <section className="bg-white">
-            <div className="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
-                <nav className="flex flex-wrap justify-center -mx-5 -my-2">
-                    <div className="px-5 py-2">
+        <section className=" bottom-0 left-0 z-20 w-full p-4 bg-white border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600">
+            {/* <div className="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
+            <nav className="flex flex-wrap justify-center -mx-5 -my-2">
+            <div className="px-5 py-2">
                         <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
                             About
                         </a>
@@ -80,7 +80,24 @@ export default function Footer() {
                 <p className="mt-8 text-base leading-6 text-center text-gray-400">
                     © 2023 Fruit Shop, Inc. All rights reserved.
                 </p>
-            </div>
+            </div> */}
+
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Samo Pharmacy</a>. All Rights Reserved.
+            </span>
+            <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">About</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline">Contact</a>
+                </li>
+            </ul>
         </section>
     )
 }

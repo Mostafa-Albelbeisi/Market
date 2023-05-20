@@ -2,8 +2,8 @@ import './globals.css'
 import Head from 'next/head'
 
 export const metadata = {
-  title: 'Fruit shop',
-  description: 'Hyperinflated fruit store - best prices 2023',
+  title: 'Samo Pharmacy',
+  description: '',
 }
 
 import { Inter } from 'next/font/google'
