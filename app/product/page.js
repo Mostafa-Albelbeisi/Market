@@ -9,7 +9,11 @@ export default function ProductPage(props) {
     const addItemToCart = useCart(state => state.addItemToCart)
     const { cost, productInfo, name, description } = product
 
+    // console.log(searchParams)
 
+    if (!product?.name) {
+        window.location.href = '/'
+    }
 
     function handleAddToCart() {
         const newItem = {
@@ -31,11 +35,12 @@ export default function ProductPage(props) {
 
                 <div className="flex flex-col gap-2 p-4">
                     <div className="flex items-center md:flex-col md:items-start justify-between text-xl gap-2">
-                        <h3>{name}</h3>
-                        <p className="md:text-base">${cost / 100}</p>
+                        <h3 className="p-5">{name}</h3>
                     </div>
-                    <p className="text-sm flex-1">{description}</p>
-                    <button onClick={handleAddToCart} className="bg-slate-700 text-white hover:bg-slate-500 cursor-pointer ml-auto px-4 py-2">Add to cart</button>
+                    <p className="text-sm flex-1 text-slate-600 p-5 -mt-7">{description}</p>
+                    <hr className="w-full bg-[#000]"></hr>
+                    <p className="md:text-base font-bold text-lg ml-5">${cost / 100}</p>
+                    <button onClick={handleAddToCart} className="bg-[#1D4ED7] rounded-lg text-white hover:bg-blue-800 cursor-pointer ml-auto px-4 py-2">Add to cart</button>
                 </div>
             </div>
         </div>

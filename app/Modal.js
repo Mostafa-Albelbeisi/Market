@@ -12,7 +12,7 @@ export default function Modal() {
 
     async function checkout() {
         const lineItems = cartItems.map(cartItems => {
-            return{
+            return {
                 price: cartItems.price_id,
                 quantity: 1
             }
@@ -59,7 +59,7 @@ export default function Modal() {
                         </>
                     )}
                 </div>
-                <div onClick={checkout} className="border border-solid border-slate-700 text-xl m-4 p-6 uppercase grid place-items-center hover:opacity-60 cursor-pointer">
+                <div onClick={checkout} className="border border-solid border-slate-700 text-xl m-6 p-6 uppercase grid place-items-center hover:opacity-60 cursor-pointer">
                     Checkout
                 </div>
             </div>
